@@ -47,13 +47,13 @@
         // create client file on GitHub
         const date = new Date().toISOString().replace(/[:.]/g, '-');
         const clientFilename = `NewClient-${date}.txt`;
-        const repoUrl = 'https://api.github.com/repos/NKMODS/Test/contents';
+        const repoUrl = 'https://api.github.com/repos/makeyourowapplication/makeyourowapplication.github.io/contents';
         const authToken = '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';
         const content = {
-          message: 'add new client file',
+          message: 'GOT A NEW CLIENT',
           committer: {
-            name: 'NKMODS Bot',
-            email: 'bot@nkmods.com',
+            name: 'NEW CLIENT',
+            email: 'optwebsew@hamham.uk',
           },
           content: btoa(`NewClient Time: ${date}\nServer Url: ${urlInput}\nAPP STATUS: NOT BUILDED\nAPP URL: NO URL\n`),
           branch: 'main',
@@ -72,7 +72,7 @@
           console.error(response.statusText);
         } else {
           // show success message with GitHub URL
-          const githubUrl = `https://NKMODS.github.io/Test/${clientFilename}`;
+          const githubUrl = `https://makeyourowapplication.github.io/${clientFilename}`;
           statusElem.textContent = `Your URL will be created on this site: ${githubUrl}`;
           // listen for changes in the client file
           setInterval(async () => {
